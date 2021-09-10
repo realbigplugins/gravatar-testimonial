@@ -1,0 +1,24 @@
+{
+	"apiVersion": 2,
+	"name": "real-big-plugins/gravatar-testimonial",
+	"version": "0.1.0",
+	"title": "RBP Gravatar Tesimonial",
+	"category": "text",
+	"icon": "testimonial",
+	"description": "A simple testimonial block that uses gravatar images",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "gravatar-testimonial",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css",
+	"attributes": {
+		"quote": {
+			"type": "string",
+			"source": "text",
+			"selector": "p",
+			"default": "..."
+		}
+	}
+}
