@@ -1,0 +1,19 @@
+{
+	"apiVersion": 2,
+	"name": "happyprime/new-dynamic-block",
+	"title": "New Dynamic Block",
+	"icon": "star-filled",
+	"category": "widgets",
+    "supports": {
+		"html": false
+	},
+	"attributes": {
+		"message": {
+			"type": "string",
+			"default": "nothing yet"
+		}
+	},
+    "editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
