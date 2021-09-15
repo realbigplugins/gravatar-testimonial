@@ -2,6 +2,7 @@
 /**
  * Plugin Name: RBP Gravatar Testimonial
  * Description: A testimonial block that pulls in images from gravatar.
+ * Version: 0.1.0
  */
 
 add_action( 'init', 'register_gravatar_testimonial_block' );
