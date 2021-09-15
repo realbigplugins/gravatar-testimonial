@@ -1,6 +1,6 @@
 {
-	"name": "new-dynamic-block",
-	"description": "An example block that shows how to register a dynamic block in a single file, block.json.",
+	"name": "gravatar-testimonial",
+	"description": "A testimonial block that pulls in images from gravatar.",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",

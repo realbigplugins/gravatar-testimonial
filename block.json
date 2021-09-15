@@ -1,9 +1,9 @@
 {
 	"apiVersion": 2,
-	"name": "happyprime/new-dynamic-block",
-	"title": "New Dynamic Block",
-	"icon": "star-filled",
-	"category": "widgets",
+	"name": "realbigplugins/gravatar-testimonial",
+	"title": "Gravatar Testimonial",
+	"icon": "testimonial",
+	"category": "text",
     "supports": {
 		"html": false
 	},

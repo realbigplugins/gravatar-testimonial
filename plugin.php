@@ -1,19 +1,19 @@
 <?php
 /**
- * Plugin Name: New Dynamic Block
- * Description: An example block that shows how to register a dynamic block in a single file, block.json.
+ * Plugin Name: RBP Gravatar Testimonial
+ * Description: A testimonial block that pulls in images from gravatar.
  */
 
-add_action( 'init', 'register_new_dynamic_block' );
-function register_new_dynamic_block() {
+add_action( 'init', 'register_gravatar_testimonial_block' );
+function register_gravatar_testimonial_block() {
 	register_block_type_from_metadata(
 		__DIR__,
 		array(
-			'render_callback' => 'new_dynamic_callback',
+			'render_callback' => 'gravatar_testimonial_callback',
 		)
 	);
 }
 
-function new_dynamic_callback( $attributes ) {
-	return '<div class="new-dynamic-block">You said:<p>' . $attributes['message'] . '.</p></div>';
+function gravatar_testimonial_callback( $attributes ) {
+	return '<div class="gravatar-testimonial-block">You said:<p>' . $attributes['message'] . '.</p></div>';
 }
