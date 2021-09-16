@@ -10,7 +10,19 @@
 	"attributes": {
 		"message": {
 			"type": "string",
-			"default": "nothing yet"
+			"default": ""
+		},
+		"name": {
+			"type": "string",
+			"default": ""
+		},
+		"company": {
+			"type": "string",
+			"default": ""
+		},
+		"email": {
+			"type": "string",
+			"default": ""
 		}
 	},
     "editorScript": "file:./build/index.js",

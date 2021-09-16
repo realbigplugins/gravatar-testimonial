@@ -16,5 +16,37 @@ function register_gravatar_testimonial_block() {
 }
 
 function gravatar_testimonial_callback( $attributes ) {
-	return '<div class="gravatar-testimonial-block">You said:<p>' . $attributes['message'] . '.</p></div>';
+	ob_start();
+	?>
+
+	<blockquote class="gravatar-testimonial-block">
+
+		<p class="gravatar-testimonial-block__quote"><?php echo $attributes['message'] ?></p>
+
+		<?php if ( $attributes['email'] || $attributes['name'] || $attributes['company'] ) : ?>
+			<div class="gravatar-testimonial-block__author">
+
+				<?php if ( $attributes['email'] ) : ?>
+					<?php echo get_avatar( $attributes['email'], 80, null, false ); ?>
+				<?php endif; ?>
+
+				<?php if ( $attributes['name'] || $attributes['company'] ) : ?>
+					<p>
+						<?php if ( $attributes['name'] ) : ?>
+							<span class="gravatar-testimonial-block__name"><?php echo $attributes['name'] ?></span>
+						<?php endif; ?>
+						<?php if ( $attributes['company'] ) : ?>
+							<span class="gravatar-testimonial-block__company">, <?php echo $attributes['company'] ?></span>
+						<?php endif; ?>
+					</p>
+				<?php endif; ?>
+				
+			</div>
+		<?php endif; ?>
+
+	</blockquote>
+
+	<?php
+	$html = ob_get_clean();
+	return $html;
 }

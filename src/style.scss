@@ -1,4 +1,22 @@
 .gravatar-testimonial-block {
-	background: purple;
-	color: white;
+
+    &__quote {
+       font-size: 1.3em; 
+    }
+
+    &__author {
+        display: flex;
+        gap: 1.5em;
+        align-items: center;
+        font-size: 1.1em;
+    }
+
+    img {
+        border-radius: 80px;
+    }
+
+    &__name {
+        font-weight: bold;
+        color: #12538f;
+    }
 }
