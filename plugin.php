@@ -19,32 +19,35 @@ function gravatar_testimonial_callback( $attributes ) {
 	ob_start();
 	?>
 
-	<blockquote class="gravatar-testimonial-block">
+	<figure class="gravatar-testimonial-block">
 
-		<p class="gravatar-testimonial-block__quote"><?php echo $attributes['message'] ?></p>
+		<blockquote class="gravatar-testimonial-block__quote"><?php echo $attributes['message'] ?></blockquote>
 
 		<?php if ( $attributes['email'] || $attributes['name'] || $attributes['company'] ) : ?>
-			<div class="gravatar-testimonial-block__author">
+			<figcaption class="gravatar-testimonial-block__author">
 
 				<?php if ( $attributes['email'] ) : ?>
 					<?php echo get_avatar( $attributes['email'], 80, null, false ); ?>
 				<?php endif; ?>
 
 				<?php if ( $attributes['name'] || $attributes['company'] ) : ?>
-					<p>
-						<?php if ( $attributes['name'] ) : ?>
-							<span class="gravatar-testimonial-block__name"><?php echo $attributes['name'] ?></span>
-						<?php endif; ?>
-						<?php if ( $attributes['company'] ) : ?>
-							<span class="gravatar-testimonial-block__company">, <?php echo $attributes['company'] ?></span>
-						<?php endif; ?>
-					</p>
+					<cite>
+						<?php
+						if ( $attributes['name'] ) :
+							echo '<span class="gravatar-testimonial-block__name">' . $attributes['name'] . '</span>';
+						endif;
+						
+						if ( $attributes['company'] ) :
+							echo ', <span class="gravatar-testimonial-block__company">' . $attributes['company'] . '</span>';
+						endif;
+						?>
+					</cite>
 				<?php endif; ?>
-				
-			</div>
+
+			</figcaption>
 		<?php endif; ?>
 
-	</blockquote>
+	</figure>
 
 	<?php
 	$html = ob_get_clean();
