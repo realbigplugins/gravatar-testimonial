@@ -1,22 +1,46 @@
-.gravatar-testimonial-block {
+.wp-block-realbigplugins-gravatar-testimonial {
+    border-top: 4px solid #cacaca;
+    border-bottom: 4px solid #cacaca;
+    padding: 1.5rem 0;
+    margin: 2.5rem 0;
 
-    &__quote {
-       font-size: 1.3em; 
+    blockquote {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        border: none;
     }
 
-    &__author {
+    figcaption {
         display: flex;
-        gap: 1.5em;
         align-items: center;
-        font-size: 1.1em;
-    }
+        margin: 0 1rem;
 
-    img {
-        border-radius: 80px;
-    }
+        @media screen and (max-width: 640px) {
+            flex-direction: column;
+        }
 
-    &__name {
-        font-weight: bold;
-        color: #12538f;
+        img {
+            border-radius: 80px;
+            margin-right: 1rem;
+    
+            @media screen and (max-width: 640px) {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        cite {
+            font-size: 1.1rem;
+            font-style: normal;
+        }
+
+        ::before {
+            content: none;
+        }
+
+        .gravatar-testimonial-name {
+            font-weight: bold;
+            color: #12538f;
+        }
     }
 }

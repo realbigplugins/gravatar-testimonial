@@ -19,12 +19,12 @@ function gravatar_testimonial_callback( $attributes ) {
 	ob_start();
 	?>
 
-	<figure class="gravatar-testimonial-block">
+	<figure class="wp-block-realbigplugins-gravatar-testimonial">
 
-		<blockquote class="gravatar-testimonial-block__quote"><?php echo $attributes['message'] ?></blockquote>
+		<blockquote><?php echo $attributes['message'] ?></blockquote>
 
 		<?php if ( $attributes['email'] || $attributes['name'] || $attributes['company'] ) : ?>
-			<figcaption class="gravatar-testimonial-block__author">
+			<figcaption>
 
 				<?php if ( $attributes['email'] ) : ?>
 					<?php echo get_avatar( $attributes['email'], 80, null, false ); ?>
@@ -34,11 +34,11 @@ function gravatar_testimonial_callback( $attributes ) {
 					<cite>
 						<?php
 						if ( $attributes['name'] ) :
-							echo '<span class="gravatar-testimonial-block__name">' . $attributes['name'] . '</span>';
+							echo '<span class="gravatar-testimonial-name">' . $attributes['name'] . '</span>';
 						endif;
 						
 						if ( $attributes['company'] ) :
-							echo ', <span class="gravatar-testimonial-block__company">' . $attributes['company'] . '</span>';
+							echo ', <span class="gravatar-testimonial-company">' . $attributes['company'] . '</span>';
 						endif;
 						?>
 					</cite>

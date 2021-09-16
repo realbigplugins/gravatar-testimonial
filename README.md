@@ -1,3 +1,3 @@
 # RBP Gravatar Testimonial Block
 
-A simple testimonial block that uses gravatar images
+A testimonial block that pulls in images from gravatar.

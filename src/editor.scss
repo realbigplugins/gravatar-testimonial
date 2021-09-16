@@ -1,0 +1,28 @@
+.wp-block-realbigplugins-gravatar-testimonial {
+    
+    p.block-editor-rich-text__editable {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+        border: none;
+    }
+
+    input[type='text'] {
+        padding: 0 1rem;
+    }
+
+    .author_name input[type='text'] {
+        background: inherit;
+        border: 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #12538f;
+    }
+
+    .author_company input[type='text'] {
+        background: inherit;
+        border: 0;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+}
