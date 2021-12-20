@@ -1,28 +1,26 @@
 .wp-block-realbigplugins-gravatar-testimonial {
     
-    p.block-editor-rich-text__editable {
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-        padding: 0 1rem;
-        border: none;
+    cite.testimonial-company, .testimonial-content p, figcaption {
+        font-size: 1rem;
     }
 
-    input[type='text'] {
-        padding: 0 1rem;
+    .testimonial-meta figcaption {
+        display: inline-block;
+    }
+    
+}
+
+.columns, .wp-block-column {
+
+    .wp-block-realbigplugins-gravatar-testimonial {
+
+        .testimonial-container {
+    
+            border-top: 1px solid #e6e6e6;
+            border-left: 1px solid #e6e6e6;
+    
+        }
+
     }
 
-    .author_name input[type='text'] {
-        background: inherit;
-        border: 0;
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #12538f;
-    }
-
-    .author_company input[type='text'] {
-        background: inherit;
-        border: 0;
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-    }
 }

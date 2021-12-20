@@ -19,34 +19,47 @@ function gravatar_testimonial_callback( $attributes ) {
 	ob_start();
 	?>
 
-	<figure class="wp-block-realbigplugins-gravatar-testimonial">
+	<figure class="testimonial">
+		<div class="testimonial-container">
+				<div class="testimonial-top row">
+					<div class="small-9 columns testimonial-meta">
 
-		<blockquote><?php echo esc_html( $attributes['message'] ) ?></blockquote>
+						<?php echo get_avatar( $attributes['email'], 96, null, false, array(
+							'class' => 'alignleft',
+						) ); ?>
 
-		<?php if ( $attributes['email'] || $attributes['name'] || $attributes['company'] ) : ?>
-			<figcaption>
+						<figcaption>
 
-				<?php if ( $attributes['email'] ) : ?>
-					<?php echo get_avatar( $attributes['email'], 80, null, false ); ?>
-				<?php endif; ?>
+							<h6 class="testimonial-name">
+								<?php echo esc_html( $attributes['name'] ); ?>
+							</h6>
 
-				<?php if ( $attributes['name'] || $attributes['company'] ) : ?>
-					<cite>
-						<?php
-						if ( $attributes['name'] ) :
-							echo '<span class="gravatar-testimonial-name">' . esc_html( $attributes['name'] ) . '</span>';
-						endif;
-						
-						if ( $attributes['company'] ) :
-							echo ', <span class="gravatar-testimonial-company">' . esc_html( $attributes['company'] ) . '</span>';
-						endif;
-						?>
-					</cite>
-				<?php endif; ?>
+							<cite class="testimonial-company">
+								<?php echo esc_html( $attributes['company'] ); ?>
+							</cite>
 
-			</figcaption>
-		<?php endif; ?>
+						</figcaption>
 
+					</div>
+
+					<div class="small-3 columns testimonial-quotation-mark">
+						<span class="fa fa-4x fa-quote-left"></span>
+					</div>
+
+				</div>
+
+				<div class="testimonial-bottom row">
+
+					<div class="small-12 columns testimonial-content">
+						<blockquote>
+							<?php echo do_shortcode( wpautop( $attributes['message'] ) ); ?>
+						</blockquote>
+					</div>
+
+				</div>
+
+			</blockquote>
+		</div>
 	</figure>
 
 	<?php
